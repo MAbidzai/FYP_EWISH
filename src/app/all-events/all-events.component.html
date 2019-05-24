@@ -1,0 +1,112 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">All Events</h4>
+                        <p class="card-category"> Here is a top view of all events</p>
+                    </div>
+
+                    <div class="card-body">
+                        <mat-form-field>
+                            <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search..">
+                        </mat-form-field>
+                        <div class="table-responsive">
+                            <mat-table #table [dataSource]="eventListMatDS" matSort>
+
+
+
+                                <ng-container matColumnDef="title" sticky>
+                                    <mat-header-cell *matHeaderCellDef mat-sort-header>
+                                        <h6 class="text-dark font-weight-bold">Title</h6>
+                                    </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">{{element.title}}</mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="startDate">
+                                    <mat-header-cell *matHeaderCellDef mat-sort-header>
+                                        <h6 class="text-dark font-weight-bold">Starting Date</h6>
+                                    </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">{{element.startDate | date:'MMM/dd/yyyy' }}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="endDate">
+                                    <mat-header-cell *matHeaderCellDef mat-sort-header>
+                                        <h6 class="text-dark font-weight-bold">Ending Date</h6>
+                                    </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">{{element.endDate | date:'MMM/dd/yyyy' }}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="address">
+                                    <mat-header-cell *matHeaderCellDef mat-sort-header>
+                                        <h6 class="text-dark font-weight-bold">Address</h6>
+                                    </mat-header-cell>
+                                    <mat-cell *matCellDef="let element">{{element.address}}
+                                    </mat-cell>
+                                </ng-container>
+
+                                <ng-container matColumnDef="action" sticky>
+                                    <mat-header-cell *matHeaderCellDef mat-sort-header
+                                        class="text-dark font-weight-bold"> Action</mat-header-cell>
+                                    <mat-cell *matCellDef="let element">
+                                        <a (click)="showEventList(element)">
+                                            <mat-icon color="primary" matTooltip="View List of {{element.title}}"
+                                                matTooltipPosition="right">list</mat-icon>
+                                            View List
+                                        </a>
+                                    </mat-cell>
+                                </ng-container>
+
+
+
+
+
+
+                                <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+                                <mat-row *matRowDef="let row; columns:displayedColumns;"></mat-row>
+                            </mat-table>
+                            <mat-paginator #paginator [length]="this.eventList.length" [pageSize]="10"
+                                [pageSizeOptions]="[10, 25, 50, 100]" [showFirstLastButtons]="true">
+                            </mat-paginator>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class=" text-primary">
+                                            <th>
+                                                Title
+                                            </th>
+                                            <th>
+                                                Starting Date
+                                            </th>
+                                            <th>
+                                                Ending Date
+                                            </th>
+                                            <th>
+                                                Address
+                                            </th>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let event of eventModelArray">
+                                                <td> {{event.title}} </td>
+                                                <td> {{event.startDate}} </td>
+                                                <td> {{event.endDate}} </td>
+                                                <td> {{event.city}}, {{event.country}} </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

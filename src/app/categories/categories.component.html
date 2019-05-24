@@ -1,0 +1,20 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-4" *ngFor="let item of category">
+        <div class="card mb-3 text-center">
+          <img class="card-img-top"
+            [src]="item.src"
+            alt="Card image cap" height="190" width="400">
+          <div class="card-body">
+            <h2 class="title">{{item.title}}</h2>
+            <p class="card-text">{{item.description}}</p>
+            <p class="card-text"><a (click)="onSelect(item)" class="btn btn-danger" style="color:white">View Products</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

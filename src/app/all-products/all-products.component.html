@@ -1,0 +1,48 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <h1 class="title">All Products</h1>
+    <div class="row">
+
+      <div class="col-md-4" *ngFor="let item of product">
+        <div class="card mb-3">
+          <div class="img__wrap">
+            <img class="card-img-top"
+              [src]="item.img"
+              alt="Card image cap" height="190" width="400">
+            <p class="img__description">
+              <li class="card-text"><b>Size: </b>{{item.size}}</li>
+              <li class="card-text"><b>Color: </b>{{item.color}}</li>
+              <li class="card-text"><b>Discount: </b><del>{{item.discount}}$</del></li>
+            </p>
+          </div>
+
+          <div class="card-body text-center">
+            <h2 class="title">{{item.title}}</h2>
+            <p class="card-text">{{item.description}}</p>
+            <hr>
+            <p class="card-text">
+              <span class="cus_text float-left">{{item.price}}$</span>
+              <a (click)="openDialog(item)" class="btn btn-danger btn-round float-right" style="color:white">Add item</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+     
+      <!-- <div class="col-md-3" *ngFor="let item of category">
+        <div class="card mb-2">
+          <img class="card-img-top" [src]="item.src" alt="Card image cap" height="150" width="400">
+          <div class="card-body">
+            <h3 class="title">{{item.title}}</h3>
+            <p class="card-text">{{item.description}}</p>
+            <p class="card-text"><a (click)="onSelect(item)" class="btn btn-danger" style="color:white">View
+                Products</a></p>
+          </div>
+        </div>
+      </div> -->
+
+
+
+    </div>
+  </div>
+</div>

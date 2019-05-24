@@ -1,0 +1,52 @@
+.cus_text{
+    padding-top: 15px;
+    font-family: fantasy;
+    font-size: xx-large;
+}
+
+.card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+// .card-img-top:hover{
+//     opacity: 0.3;
+// }
+
+h2.title{
+    margin-bottom: 0.500rem !important;
+}
+
+/* relevant styles */
+.img__wrap {
+    position: relative;
+}
+  
+.img__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(49, 50, 51, 0.72);
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    padding: 50px;
+    /* transition effect. not necessary */
+    transition: opacity .4s, visibility .6s;
+}
+  
+.img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+}
+
+.img__description {
+    transition: .6s;
+    transform: translateY(3em);
+}
+  
+.img__wrap:hover .img__description {
+    transform: translateY(0);
+}

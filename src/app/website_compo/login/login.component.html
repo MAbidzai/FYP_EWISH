@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login</title>
+</head>
+<body>
+  <div class="login_wrapper">
+  <div class="container mat-elevation-z4 b-radius">
+    <div class="form-container">
+
+      <div style="padding-bottom:30px;">
+        <h3>Sign in</h3>
+        <h5>with E-wish Account</h5>
+      </div>
+
+      <form role="form" #loginForm="ngForm">
+
+        <div class="row">
+          <div class="col-sm-12" id="test">
+            <mat-form-field appearance="outline">
+              <mat-label>Username</mat-label>
+              <input matInput type="text" [(ngModel)]="loginUserName" #UserNameField="ngModel" name="UserNameField"
+                id="UserNameField" required autofocus>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12" id="test">
+            <mat-form-field appearance="outline">
+              <mat-label>Password</mat-label>
+              <input matInput type="password" [(ngModel)]="loginUserPassword" #UserPasswordField="ngModel"
+                id="UserPasswordField" name="UserPasswordField" required>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 mx-auto">
+            <div class="example-button-row">
+              <a mat-button routerLink="/forgotpassword" color="primary">Forgot Password?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-6" id="test">
+            <button mat-stroked-button class="float-left" color="primary" routerLink="/SignUp">Create a account
+            </button>
+          </div>
+
+          <div class="col-6" id="test">
+            <button mat-raised-button class="float-right" color="primary" type="submit"
+              [disabled]="!loginForm.form.valid" (click)="onLoggedin()">Login</button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+

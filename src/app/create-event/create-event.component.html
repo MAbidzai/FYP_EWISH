@@ -1,0 +1,106 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Create Event</h4>
+                        <p class="card-category">Fill your information</p>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="eventForm" #EventForm="ngForm" autocomplete="off" (ngSubmit)="onSubmit()">
+                            <div class="row">
+
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #title formControlName="title" placeholder="Event Title">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #startDate formControlName="startDate" [matDatepicker]="picker1" placeholder="Starting Date">
+                                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker1></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #endDate formControlName="endDate" [matDatepicker]="picker2" placeholder="Ending Date">
+                                        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker2></mat-datepicker>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #address formControlName="address" placeholder="Address" type="text">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #city formControlName="city" placeholder="City" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #country formControlName="country" placeholder="Country" type="text">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input matInput #postelCode formControlName="postelCode" placeholder="Postal Code" type="text">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <mat-form-field class="example-full-width">
+                                        <textarea matInput #description formControlName="description" placeholder="Description" maxlength="500"></textarea>
+                                        <mat-hint align="end">
+                                            <small>(Max. 500 Characters)</small>
+                                            {{description.value?.length || 0}}/500
+                                          </mat-hint>
+                                    </mat-form-field>
+                                    <!-- <div class="form-group">
+      
+                                            <div class="form-group">
+                                                <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                                                <textarea class="form-control" rows="5"></textarea>
+                                            </div>
+                                        </div> -->
+                                </div>
+                            </div>
+                            <button mat-raised-button [disabled]="!EventForm.form.valid" type="submit" class="btn btn-danger pull-right">
+                                Create Event
+                            </button>
+                            <div class="clearfix"></div>
+                            {{eventForm.value | json}}
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">All Events</h4>
+                    </div>
+                    <div class="card-body">
+                        <mat-list>
+                            <mat-list-item *ngFor="let event of (eventModelArray ? eventModelArray.slice(0,3): [])">
+                                
+                                <button mat-button>{{event.title}}</button>
+                            </mat-list-item>
+                        </mat-list>
+                        <button mat-raised-button class="btn btn-danger btn-round" routerLink="/AllEvents">View All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

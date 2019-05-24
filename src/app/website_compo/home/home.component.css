@@ -1,0 +1,142 @@
+
+html{
+  scroll-behavior: smooth  !important;
+}
+
+ body {
+    font-family: 'Lato'  !important;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Catamaran'  !important;
+    font-weight: 800  !important;
+  }
+  
+  .btn-xl {
+    text-transform: uppercase !important;
+    padding: 1.5rem 3rem  !important;
+    font-size: 0.9rem  !important;
+    font-weight: 700  !important;
+    letter-spacing: 0.1rem  !important;
+  }
+  
+  .bg-black {
+    background-color: #000 !important;
+  }
+  
+  .rounded-pill {
+    border-radius: 5rem !important;
+  }
+  
+  .navbar-custom {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+  }
+  
+  .navbar-custom .navbar-brand {
+    text-transform: uppercase  !important;
+    font-size: 1rem  !important;
+    letter-spacing: 0.1rem  !important;
+    font-weight: 700  !important;
+    color: antiquewhite  !important;
+  }
+  
+  .navbar-custom .navbar-nav .nav-item .nav-link {
+    text-transform: uppercase  !important;
+    font-size: 0.8rem  !important;
+    font-weight: 700  !important;
+    letter-spacing: 0.1rem  !important;
+    color: antiquewhite !important;
+
+  }
+  
+  .nav-link {
+    color: aliceblue !important;
+    font-family: cursive;
+  }
+
+  .p-5 > p{
+    font-weight: bold;
+  }
+  header.masthead {
+    position: relative !important;
+    overflow: hidden !important;
+    padding-top: calc(7rem + 72px) !important;
+    padding-bottom: 7rem !important;
+    background-image: url('../../../assets/img/banner.jpg') !important;
+    /* background: -webkit-gradient(linear, left bottom, left top, from(#ff6a00), to(#ee0979)) !important;
+    background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%) !important; */
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-attachment: scroll !important;
+    background-size: cover !important;
+  }
+  
+  header.masthead .masthead-content {
+    z-index: 1 !important;
+    position: relative !important;
+  }
+  
+  header.masthead .masthead-content .masthead-heading {
+    font-size: 4rem !important;
+  }
+  
+  header.masthead .masthead-content .masthead-subheading {
+    font-size: 2rem !important;
+  }
+  
+  
+  
+  
+  @media (min-width: 992px) {
+    header.masthead {
+      padding-top: calc(10rem + 55px) !important;
+      padding-bottom: 10rem !important;
+    }
+    header.masthead .masthead-content .masthead-heading {
+      font-size: 6rem !important;
+    }
+    header.masthead .masthead-content .masthead-subheading {
+      font-size: 4rem !important;
+    }
+  }
+  
+  .bg-primary {
+    background-color: #ee0979  !important;
+  }
+  
+  .btn-primary {
+    background-color: #ee0979 !important;
+    border-color: #ee0979 !important;
+  }
+  
+  .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #bd0760  !important;
+    border-color: #bd0760  !important;
+  }
+  
+  .btn-primary:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5) !important;
+  }
+  
+  .btn-secondary {
+    background-color: #ff6a00 !important;
+    border-color: #ff6a00 !important;
+  }
+  
+  .btn-secondary:active, .btn-secondary:focus, .btn-secondary:hover {
+    background-color: #cc5500  !important;
+    border-color: #cc5500  !important;
+  }
+  
+  .btn-secondary:focus {
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 106, 0, 0.5) !important;
+  }

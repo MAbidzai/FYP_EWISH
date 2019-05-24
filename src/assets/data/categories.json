@@ -1,0 +1,29 @@
+[
+    {
+        "category_id": 1,
+        "title": "Wedding",
+        "description": "This is dummy description...", 
+        "src": "https://images.unsplash.com/photo-1469371670807-013ccf25f16a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixcategory_id=eyJhcHBfaWQiOjF9"
+    },
+    
+    {
+        "category_id": 2,
+        "title": "Birthday",
+        "description": "This is dummy description...", 
+        "src": "https://images.unsplash.com/photo-1531956531700-dc0ee0f1f9a5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixcategory_id=eyJhcHBfaWQiOjF9"
+    },
+
+    {
+        "category_id": 3,
+        "title": "Engagement",
+        "description": "This is dummy description...", 
+        "src": "https://images.unsplash.com/photo-1518370265276-f22b706aeac8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixcategory_id=eyJhcHBfaWQiOjF9"
+    },
+    
+    {
+        "category_id": 3,
+        "title": "Engagement",
+        "description": "This is dummy description...", 
+        "src": "https://images.unsplash.com/photo-1518370265276-f22b706aeac8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixcategory_id=eyJhcHBfaWQiOjF9"
+    }
+]

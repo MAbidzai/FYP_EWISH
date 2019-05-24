@@ -1,0 +1,67 @@
+[
+    {
+        "product_id": 1,
+        "title": "chair",
+        "description": "Beatiful chair with comfort seat",
+        "size": "small",
+        "color": "wood",
+        "img": "https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
+        "price": 37,
+        "discount": 10
+    },
+
+    {
+        "product_id": 2,
+        "title": "Watch",
+        "description": "Beatiful branded watch in brown",
+        "size": "All",
+        "color": "Brown",
+        "img": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
+        "price": 17.5,
+        "discount": 3
+    },
+
+    {
+        "product_id": 3,
+        "title": "Eye Glasses",
+        "description": "Eyeglasses with black frames",
+        "size": "medium",
+        "color": "Transparent",
+        "img": "https://images.unsplash.com/photo-1483412468200-72182dbbc544?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
+        "price": 8,
+        "discount": 1
+    },
+
+    {
+        "product_id": 1,
+        "title": "chair",
+        "description": "Beatiful chair with comfort seat",
+        "size": "small",
+        "color": "wood",
+        "img": "https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
+        "price": 37,
+        "discount": 10
+    },
+
+    {
+        "product_id": 2,
+        "title": "Watch",
+        "description": "Beatiful branded watch in brown",
+        "size": "All",
+        "color": "Brown",
+        "img": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
+        "price": 17,
+        "discount": 3
+    },
+
+    {
+        "product_id": 3,
+        "title": "Eye Glasses",
+        "description": "Eyeglasses with black frames",
+        "size": "medium",
+        "color": "Transparent",
+        "img": "https://images.unsplash.com/photo-1483412468200-72182dbbc544?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
+        "price": 8,
+        "discount": 1
+    }
+]

@@ -1,0 +1,77 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Add Category</h4>
+            <p class="card-category">Fill your information</p>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" #categoryForm="ngForm">
+
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="text" id="title" [(ngModel)]="category.title" name="title" #title="ngModel"
+                      placeholder="Category Title" required>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput type="text" id="description" [(ngModel)]="category.description" name="description"
+                      #description="ngModel" placeholder="Description" maxlength="20" required>
+                    <mat-hint align="end">
+                      <small>(Max. 20 Characters)</small>
+                      {{description.value?.length || 0}}/20
+                    </mat-hint>
+                  </mat-form-field>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="btn btn-default"> Select Image
+                    <input type="file" id="src" [(ngModel)]="category.src" name="src" #src="ngModel"
+                      (change)="selectFile($event)" accept="image/*" enctype="multipart/form-data" required>
+                  </label>
+                  <br>
+                  <mat-hint>
+                    <small>(Min. size 400x400)</small>
+                  </mat-hint>
+                </div>
+              </div>
+
+              <button mat-raised-button [disabled]="!categoryForm.valid" type="submit"
+                class="btn btn-danger pull-right">
+                Add category
+              </button>
+              <div class="clearfix"></div>
+              <!-- {{categoryForm.value | json}} -->
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">All Categories</h4>
+          </div>
+          <div class="card-body">
+            <mat-list>
+              <mat-list-item *ngFor="let category of (categoryModelArray ? categoryModelArray.slice(0,3): [])">
+
+                <button mat-button>{{category.title}}</button>
+              </mat-list-item>
+            </mat-list>
+            <button mat-raised-button class="btn btn-danger btn-round" routerLink="/categories">View All</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

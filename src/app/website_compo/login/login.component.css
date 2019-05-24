@@ -1,0 +1,90 @@
+body {
+  color: #202124 !important;
+  background: #fff !important;
+  font-family: 'Roboto', sans-serif !important;
+  height: -webkit-fill-available !important;
+}
+
+.login_wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /* width: 40%; */
+  text-align: center;
+}
+
+.form-container {
+  text-align: center;
+  padding: 30px;
+}
+
+.b-radius {
+  border-radius: 10px !important;
+}
+
+#test ::ng-deep .mat-form-field-appearance-outline {
+  line-height: -0.175;
+}
+
+#test ::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  padding: 0px 10px 0px 10px;
+  font-size: 15px;
+  height: 40px;
+}
+
+#test ::ng-deep .mat-form-field-infix {
+  padding: 2px 0 5px 0;
+}
+
+#test ::ng-deep .mat-form-field-hide-placeholder .mat-form-field-label-wrapper {
+  text-align: left;
+  top: -25px;
+}
+
+#test ::ng-deep .mat-form-field-should-float {
+  text-align: left;
+  width: 80%;
+}
+
+#test ::ng-deep .mat-input-element {
+  font-size: 17px;
+}
+
+#test ::ng-deep .mat-form-field {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .login_wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .login_wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  .form-container {
+    text-align: center;
+    padding: 15px;
+  }
+  
+}

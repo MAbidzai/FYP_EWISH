@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>Confirmation!</h1>
+
+<div mat-dialog-content>
+  <p>Add <b>{{data.title}}</b></p>
+  <mat-form-field>
+    <mat-label>Select list</mat-label>
+    <mat-select [(ngModel)]="data.eventID">
+      <mat-option *ngFor="let event of eventList" [value]="event.event_id">
+
+        {{event.title}}
+
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+
+  <!-- <mat-form-field>
+    <input matInput [(ngModel)]="data.eventID">
+  </mat-form-field> -->
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-raised-button color="default" mat-dialog-close>No</button>
+  <button mat-raised-button color="warn" [mat-dialog-close]="data.eventID" cdkFocusInitial>Yes</button>
+</div>
+
+
+<!-- [(ngModel)]="data.eventID"  ngDefaultControl> -->

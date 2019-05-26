@@ -27,6 +27,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
+import { ListForGuestComponent } from './website_compo/list-for-guest/list-for-guest.component';
+import { FindListDialogComponent } from './shared/find-list-dialog/find-list-dialog.component';
 
 @NgModule({
   imports: [
@@ -54,7 +56,9 @@ import { UserLayoutComponent } from './layouts/user-layout/user-layout.component
     LoginForgotPasswordComponent,
     UpdatePasswordComponent,
     UserLayoutComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ListForGuestComponent,
+    FindListDialogComponent
   ],
   providers: [AppUserService,
     ErrorHandler,
@@ -62,7 +66,7 @@ import { UserLayoutComponent } from './layouts/user-layout/user-layout.component
 
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ConfirmDialogComponent]
+  entryComponents: [ConfirmDialogComponent, FindListDialogComponent]
 
 })
 export class AppModule { }

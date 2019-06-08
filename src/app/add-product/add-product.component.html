@@ -1,94 +1,110 @@
 <div class="main-content">
   <div class="container-fluid">
     <div class="row">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-header card-header-danger">
-              <h4 class="card-title">Add Product</h4>
-              <p class="card-category">Fill your information</p>
-            </div>
-            <div class="card-body">
-              <form (ngSubmit)="onSubmit()" #productForm="ngForm">
-                <div class="row">
-                  <div class="col-md-12">
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Title" type="text" id="title" [(ngModel)]="product.title"
-                        name="title" #title="ngModel" required>
-                    </mat-form-field>
-                  </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Add Product</h4>
+            <p class="card-category">Fill your information</p>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onSubmit()" #productForm="ngForm">
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Title" type="text" id="title" [(ngModel)]="product.title" name="title"
+                      #title="ngModel" required>
+                  </mat-form-field>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Size" type="text" id="size" [(ngModel)]="product.size" name="size"
-                        #size="ngModel" required>
-                    </mat-form-field>
-                  </div>
-                  <div class="col-md-6">
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Color" type="text" id="color" [(ngModel)]="product.color"
-                        name="color" #color="ngModel" required>
-                    </mat-form-field>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Size" type="text" id="size" [(ngModel)]="product.size" name="size"
+                      #size="ngModel" required>
+                  </mat-form-field>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Price" type="number" id="price" [(ngModel)]="product.price"
-                        name="price" #price="ngModel" required>
-                    </mat-form-field>
-                  </div>
-                  <div class="col-md-6">
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Discount" type="number" id="discount" [(ngModel)]="product.discount"
-                        name="discount" #discount="ngModel" required>
-                    </mat-form-field>
-                  </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Color" type="text" id="color" [(ngModel)]="product.color" name="color"
+                      #color="ngModel" required>
+                  </mat-form-field>
                 </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <mat-form-field class="example-full-width">
-                      <input matInput placeholder="Discription" type="text" id="discription"
-                        [(ngModel)]="product.discription" name="discription" #discription="ngModel" required>
-                    </mat-form-field>
-                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Price" type="number" id="price" [(ngModel)]="product.price"
+                      name="price" #price="ngModel" required>
+                  </mat-form-field>
                 </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Discount" type="number" id="discount" [(ngModel)]="product.discount"
+                      name="discount" #discount="ngModel" required>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field>
+                    <mat-label>Select Category</mat-label>
+                    <mat-select [(ngModel)]="product.category_id" name="category_id">
+                      <mat-option *ngFor="let category of categoryList" [value]="category.category_id">
+                
+                        {{category.title}}
+                
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+              </div>
 
-                <div class="row">
-                  <div class="col-md-12">
-                    <label class="btn btn-default"> Select Image
-                      <input type="file" id="img" [(ngModel)]="product.img" name="img" #img="ngModel"
-                        (change)="selectFile($event)" accept="image/*" enctype="multipart/form-data" required>
-                    </label>
-                    <br>
-                    <mat-hint>
-                      <small>(Min. size 400x400)</small>
-                    </mat-hint>
-                  </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Discription" type="text" id="discription"
+                      [(ngModel)]="product.discription" name="discription" #discription="ngModel" required>
+                  </mat-form-field>
                 </div>
+              </div>
 
-                <button mat-raised-button [disabled]="!productForm.valid" type="submit" class="btn btn-danger pull-right">Add Product</button>
-                <div class="clearfix"></div>
-              </form>
-            </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <label class="btn btn-default"> Select Image
+                    <input type="file" id="img" [(ngModel)]="product.img" name="img" #img="ngModel"
+                      (change)="selectFile($event)" accept="image/*" enctype="multipart/form-data" required>
+                  </label>
+                  <br>
+                  <mat-hint>
+                    <small>(Min. size 400x400)</small>
+                  </mat-hint>
+                </div>
+              </div>
+
+              <button mat-raised-button [disabled]="!productForm.valid" type="submit"
+                class="btn btn-danger pull-right">Add Product</button>
+              <div class="clearfix"></div>
+            </form>
           </div>
         </div>
+      </div>
 
-        <div class="col-md-4">
-            <div class="card">
-              <div class="card-header card-header-danger">
-                <h4 class="card-title">All Products</h4>
-              </div>
-              <div class="card-body">
-                <mat-list>
-                  <mat-list-item *ngFor="let product of (productModelArray ? productModelArray.slice(0,3): [])">
-                    <button mat-button>{{product.title}}</button>
-                  </mat-list-item>
-                </mat-list>
-                <button mat-raised-button class="btn btn-danger btn-round" routerLink="/AllProducts">View All</button>
-              </div>
-            </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">All Products</h4>
           </div>
+          <div class="card-body">
+            <mat-list>
+              <mat-list-item *ngFor="let product of (productModelArray ? productModelArray.slice(0,3): [])">
+                <button mat-button>{{product.title}}</button>
+              </mat-list-item>
+            </mat-list>
+            <button mat-raised-button class="btn btn-danger btn-round" routerLink="/allProductList">View All</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

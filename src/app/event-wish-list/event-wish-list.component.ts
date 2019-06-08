@@ -1,4 +1,6 @@
+import { EventsService } from './../shared/services/events.service';
 import { Product } from './../shared/Models/Product';
+import { Event } from './../shared/Models/Event';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { ProductsService } from './../shared/services/products.service';
@@ -9,12 +11,15 @@ import { ProductsService } from './../shared/services/products.service';
   styleUrls: ['./event-wish-list.component.scss']
 })
 export class EventWishListComponent implements OnInit {
-  public eventId;
-
+  static eventId;
+  public eventName: string;
   product: Product[] = [];
+  public eventList: Event[] = [];
+
 
   constructor(private route: ActivatedRoute,
-              private productsService: ProductsService
+              private productsService: ProductsService,
+              private eventService: EventsService
               ) { }
 
 
@@ -26,12 +31,23 @@ export class EventWishListComponent implements OnInit {
     this.route.paramMap.subscribe((params: ParamMap) => {
       // tslint:disable-next-line:radix
       const id = parseInt(params.get('id'));
-      this.eventId = id;
+      EventWishListComponent.eventId = id;
     }
     )
   }
 
   removeProduct(product) {
       console.log(product);
+  }
+
+  getTitle() {
+    this.eventService.getEvents()
+      .subscribe(data => {
+        for (const item of data) {
+          if (item.event_id === EventWishListComponent.eventId) {
+            this.eventName = item.title;
+          }
+        }
+      });
   }
 }

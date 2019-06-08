@@ -12,7 +12,7 @@
             <p class="img__description">
               <li class="card-text"><b>Size: </b>{{item.size}}</li>
               <li class="card-text"><b>Color: </b>{{item.color}}</li>
-              <li class="card-text"><b>Discount: </b><del>{{item.discount}}$</del></li>
+              <li class="card-text"><b>Discount: </b><del>Rs.{{item.discount}}</del></li>
             </p>
           </div>
 
@@ -21,7 +21,7 @@
             <p class="card-text">{{item.description}}</p>
             <hr>
             <p class="card-text">
-              <span class="cus_text float-left">{{item.price}}$</span>
+              <span class="cus_text float-left">Rs.{{item.price}}</span>
               <a (click)="openDialog(item)" class="btn btn-danger btn-round float-right" style="color:white">Add item</a>
             </p>
           </div>

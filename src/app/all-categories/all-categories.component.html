@@ -45,10 +45,6 @@
                                       class="text-dark font-weight-bold"> Action</mat-header-cell>
                                   <mat-cell *matCellDef="let element">
                                       <a (click)="showEventList(element)">
-                                          <mat-icon color="primary" matTooltip="Edit {{element.title}}"
-                                              matTooltipPosition="right">edit</mat-icon>
-                                      </a>
-                                      <a (click)="showEventList(element)">
                                           <mat-icon color="primary" matTooltip="Delete {{element.title}}"
                                               matTooltipPosition="right">
                                               delete_forever</mat-icon>

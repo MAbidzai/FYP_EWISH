@@ -9,5 +9,6 @@ export class Product {
     public price: number;
     public discount: number;
     public status: string;
+    public category_id: number;
 
 }

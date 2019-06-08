@@ -1,25 +1,19 @@
-<h1 mat-dialog-title>Confirmation!</h1>
+<div class="card card-nav-tabs" style="width: 20rem;">
+  <div class="card-header card-header-danger">
+    <h1 mat-dialog-title class="card-title text-center">{{data.title}}</h1>
+  </div>
+  <div class="card-body">
+    <div mat-dialog-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Enter List ID</mat-label>
+        <input matInput placeholder="Any Number" type="number" #id="ngModel" [(ngModel)]="data.listID" required>
+      </mat-form-field>
+    </div>
 
-<div mat-dialog-content>
-  <p><b>{{data.title}}</b></p>
-
-  <mat-form-field appearance="outline">
-    <mat-label>Enter List ID</mat-label>
-    <input matInput placeholder="Any Number" type="number" #id="ngModel" [(ngModel)]="data.listID">
-  </mat-form-field>
-
-
-
-  <!-- <mat-form-field>
-    <input matInput [(ngModel)]="data.eventID">
-  </mat-form-field> -->
+    <div mat-dialog-actions align="end">
+      <button mat-raised-button class="btn btn-default" mat-dialog-close>No</button>
+      <button mat-raised-button class="btn btn-danger" [disabled]="!id.valid" [mat-dialog-close]="data.listID"
+        cdkFocusInitial>Yes</button>
+    </div>
+  </div>
 </div>
-
-<div mat-dialog-actions align="end">
-  <button mat-raised-button color="default" mat-dialog-close>No</button>
-  <button mat-raised-button color="warn" [disabled]="!id.dirty" [mat-dialog-close]="data.listID"
-    cdkFocusInitial>Yes</button>
-</div>
-
-
-<!-- [(ngModel)]="data.eventID"  ngDefaultControl> -->

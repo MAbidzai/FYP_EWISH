@@ -8,5 +8,6 @@ export class Product {
     public img2: Blob;
     public price: number;
     public discount: number;
+    public status: string;
 
 }

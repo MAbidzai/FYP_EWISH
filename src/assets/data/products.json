@@ -7,7 +7,8 @@
         "color": "wood",
         "img": "https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
         "price": 37,
-        "discount": 10
+        "discount": 1,
+        "status": "NO"
     },
 
     {
@@ -18,7 +19,8 @@
         "color": "Brown",
         "img": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
         "price": 17.5,
-        "discount": 3
+        "discount": 3,
+        "status": "NO"
     },
 
     {
@@ -29,7 +31,8 @@
         "color": "Transparent",
         "img": "https://images.unsplash.com/photo-1483412468200-72182dbbc544?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
         "price": 8,
-        "discount": 1
+        "discount": 1,
+        "status": "YES"
     },
 
     {
@@ -40,7 +43,8 @@
         "color": "wood",
         "img": "https://images.unsplash.com/photo-1519947486511-46149fa0a254?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
         "price": 37,
-        "discount": 10
+        "discount": 1,
+        "status": "YES"
     },
 
     {
@@ -51,7 +55,8 @@
         "color": "Brown",
         "img": "https://images.unsplash.com/photo-1524805444758-089113d48a6d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
         "price": 17,
-        "discount": 3
+        "discount": 3,
+        "status": "NO"
     },
 
     {
@@ -62,6 +67,7 @@
         "color": "Transparent",
         "img": "https://images.unsplash.com/photo-1483412468200-72182dbbc544?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9",
         "price": 8,
-        "discount": 1
+        "discount": 1,
+        "status": "NO"
     }
 ]

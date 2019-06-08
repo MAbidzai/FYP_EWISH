@@ -1,0 +1,31 @@
+<div class="card card-nav-tabs" style="width: 20rem;">
+  <div class="card-header card-header-danger">
+    <h1 mat-dialog-title class="card-title">Confirmation!</h1>
+  </div>
+  <div class="card-body">
+    <div mat-dialog-content [formGroup]="form">
+      <p>Are you want to add <b>{{data.title}}</b>?</p>
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Enter Your Name" #name type="text" formControlName="name" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Enter Your Email" #email type="text" formControlName="email" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="Any Number" #phone formControlName="phone" mask="0000-0000000"
+          required>
+      </mat-form-field>
+    </div>
+
+    <div mat-dialog-actions align="end">
+      <button mat-raised-button class="btn btn-default" (click)="close()">Close</button>
+      <button mat-raised-button class="btn btn-danger" (click)="save()"
+        [disabled]="!form.valid" cdkFocusInitial>Save</button>
+    </div>
+  </div>
+</div>

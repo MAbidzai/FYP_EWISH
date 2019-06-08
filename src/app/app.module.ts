@@ -1,3 +1,4 @@
+import { EventsService } from './shared/services/events.service';
 import { ConfirmDialogComponent } from './shared/confirm-dialog/confirm-dialog.component';
 import { HttpRequestHeaderInterceptor } from './shared/interceptors/HttpRequestHeaderInterceptor';
 import { ErrorHandler } from './shared/ErrorHandler/ErrorHandler';
@@ -29,6 +30,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserLayoutComponent } from './layouts/user-layout/user-layout.component';
 import { ListForGuestComponent } from './website_compo/list-for-guest/list-for-guest.component';
 import { FindListDialogComponent } from './shared/find-list-dialog/find-list-dialog.component';
+import { ProductsService } from './shared/services/products.service';
+import { GuestFormDialogComponent } from './shared/guest-form-dialog/guest-form-dialog.component';
 
 @NgModule({
   imports: [
@@ -58,15 +61,16 @@ import { FindListDialogComponent } from './shared/find-list-dialog/find-list-dia
     UserLayoutComponent,
     ConfirmDialogComponent,
     ListForGuestComponent,
-    FindListDialogComponent
+    FindListDialogComponent,
+    GuestFormDialogComponent
   ],
-  providers: [AppUserService,
+  providers: [AppUserService, ProductsService, EventsService,
     ErrorHandler,
     { provide: HTTP_INTERCEPTORS, useClass: HttpRequestHeaderInterceptor, multi: true }
 
   ],
   bootstrap: [AppComponent],
-  entryComponents: [ConfirmDialogComponent, FindListDialogComponent]
+  entryComponents: [ConfirmDialogComponent, FindListDialogComponent, GuestFormDialogComponent]
 
 })
 export class AppModule { }

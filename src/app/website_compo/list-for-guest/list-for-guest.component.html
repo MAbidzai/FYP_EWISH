@@ -1,3 +1,62 @@
-<p>
-  Your list id is {{listId}}
-</p>
+<div class="main-content">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="container">
+        <div class="card card-nav-tabs">
+          <div class="card-header card-header-danger">
+           <h1 mat-dialog-title class="card-title">{{eventName}}</h1>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-12 col-md-10 col-md-offset-1">
+                <table class="table table-hover">
+                  <thead>
+                    <tr class="heading_txt">
+                      <th>Product</th>
+                      <th class="text-center">Price</th>
+                      <th class="text-center">Selected</th>
+                      <th> </th>
+                      <th class="text-center">Action</th>
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let product of product" [ngClass]="{'dis': product.status === 'YES'}">
+
+                      <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                          <a class="thumbnail pull-left" href="#"> <img class="media-object" [src]="product.img"
+                              style="width: 72px; height: 72px;"> </a>
+                          <div class="media-body left_margin">
+                            <h4 class="media-heading heading_txt"><b>{{product.title}}</b></h4>
+                            <h5 class="media-heading"> Size: <span>{{product.size}}</span></h5>
+                            <h5 class="media-heading"> Color: <span>{{product.color}}</span></h5>
+                          </div>
+                        </div>
+                      </td>
+                      <td class="col-sm-1 col-md-1 text-center"><strong>{{product.price}}$</strong></td>
+                      <td class="col-sm-1 col-md-1 text-center"><strong>{{product.status}}</strong></td>
+                      <td class="col-sm-1 col-md-1 text-center"> </td>
+                      <td class="col-sm-1 col-md-1">
+                        <button type="button" [disabled]="product.status === 'YES'"
+                          [ngClass]="{ 'btn btn-default' :product.status === 'YES', 'btn btn-success' :product.status === 'NO'}"
+                          (click)="openDialog(product)">
+                          <span *ngIf="product.status === 'YES'">Selected</span>
+                          <span *ngIf="product.status === 'NO'">Select</span>
+
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(FindListDialogComponent, {
-      data: { title: 'Enter List Id Here:-' }
+      data: { title: 'Enter List ID Here' }
     });
     dialogRef.afterClosed().subscribe(result => {
 
